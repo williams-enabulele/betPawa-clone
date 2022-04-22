@@ -5,8 +5,9 @@
       class="img"
       alt="promotion-banner"
     />
+      <game/>
   </div>
-  <game/>
+
 </template>
 
 <script lang="ts">
