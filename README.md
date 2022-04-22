@@ -1,4 +1,5 @@
 # betpawa-clone
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0d2fd9c9-6d4e-4c6d-ba00-a348fa21fd05/deploy-status)](https://app.netlify.com/sites/storied-duckanoo-df3483/deploys)
 
 ## Project setup
 ```
