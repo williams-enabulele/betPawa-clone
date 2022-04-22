@@ -12,8 +12,8 @@
     </div>
     <div class="row">
       <ul>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
+        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
       </ul>
     </div>
     <div class="row">
@@ -165,4 +165,6 @@ export default defineComponent({
 .brand > span {
   color: #fff;
 }
+
+
 </style>

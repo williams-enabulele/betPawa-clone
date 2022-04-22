@@ -5,9 +5,8 @@
       class="img"
       alt="promotion-banner"
     />
-      <game/>
+    <game />
   </div>
-
 </template>
 
 <script lang="ts">
@@ -17,14 +16,12 @@ import Game from "../components/Game.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
-    "game": Game
+    game: Game,
   },
 });
 </script>
 
 <style scoped>
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -34,5 +31,4 @@ export default defineComponent({
   max-width: 100%;
   margin: 0 10px;
 }
-
 </style>

@@ -202,6 +202,11 @@ export default defineComponent({
   components: {
     Accordion,
   },
+
+ 
+  props: {
+      isMenu: Boolean
+  },
 });
 </script>
 
@@ -281,5 +286,20 @@ ul > li:hover {
 }
 .search-wrapper>span{
     margin-right: 5px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.icon {
+  display: block;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+.icon {
+  display: none;
+}
 }
 </style>

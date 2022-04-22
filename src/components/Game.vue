@@ -7,7 +7,46 @@
       </div>
       <i class="fa-solid fa-circle-info"></i>
     </div>
-    <div class="date">
+    <div class="line">
+           <div class="date">
+      <span>5:00 pm</span>
+      <span>Sat 23/04</span>
+    </div>
+    <div class="teams">
+      <span>FC Internazionale</span>
+      <span>AS Roma</span>
+    </div>
+    <div class="category">
+      <li><a>Football/ Italie Serie A </a></li>
+    </div>
+    <div class="market">
+      <button class="mkt-btn"><span>1</span>1.65<span></span></button>
+      <button class="mkt-btn"><span>x</span>4.30<span></span></button>
+      <button class="mkt-btn"><span>2</span><span>5.50</span></button>
+      <button class="mkt-btn-sm">55+</button>
+    </div>
+    </div>
+      <div class="line">
+           <div class="date">
+      <span>12:30 pm</span>
+      <span>Sat 23/04</span>
+    </div>
+    <div class="teams">
+      <span>Buyern Munich</span>
+      <span>Borussia Dortmond</span>
+    </div>
+    <div class="category">
+      <li><a>Football/ Germany Bundesliga 1</a></li>
+    </div>
+    <div class="market">
+      <button class="mkt-btn"><span>1</span>1.35<span></span></button>
+      <button class="mkt-btn"><span>x</span>6.00<span></span></button>
+      <button class="mkt-btn"><span>2</span><span>8.00</span></button>
+      <button class="mkt-btn-sm">57+</button>
+    </div>
+    </div>
+      <div class="line">
+           <div class="date">
       <span>12:30 pm</span>
       <span>Sat 23/04</span>
     </div>
@@ -24,7 +63,9 @@
       <button class="mkt-btn"><span>2</span><span>3.50</span></button>
       <button class="mkt-btn-sm">64+</button>
     </div>
+    </div>
   </div>
+  
 </template>
 
 <script lang="ts">
@@ -40,7 +81,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid #f4f5f0;
+  
 }
 
 .wrap > span {
@@ -122,5 +163,9 @@ export default defineComponent({
   width: 40px;
   margin-right: 5px;
 
+}
+
+.line {
+    border-bottom: 1px solid #f4f5f0;
 }
 </style>
