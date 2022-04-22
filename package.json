@@ -9,10 +9,20 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "@dzangolab/vue-accordion": "^2.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
+    "vue-material-design-icons": "^5.0.0",
+    "vue-nav-tabs": "^0.5.7",
     "vue-router": "^4.0.3",
+    "vue3-tabs": "^0.1.13-beta.3",
+    "vue3-tabs-component": "^1.0.6",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

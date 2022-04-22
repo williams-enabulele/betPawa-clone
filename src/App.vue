@@ -1,30 +1,91 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <bpheader />
+    <div class="spaced">
+      <bpsidebar class="left" />
+      <router-view />
+      <bprightbar class="right" />
+    </div>
+
+    <bpfooter />
+  </div>
 </template>
 
 <style lang="scss">
+@import "./assets/css/main.css";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Gotham, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .right, .left {
+    display: none!important;
+  }
+  .spaced {
+    display: grid;
+    grid-template-columns: 100%;
+    
+  }
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   .right,
+  .left {
+    display: block;
+  }
+ .spaced {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 2fr;
+    border-bottom: 1px solid #000;
+  }
+  
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .right,
+  .left {
+    display: block;
+  }
+ .spaced {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 2fr;
+    border-bottom: 1px solid #000;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .right,
+  .left {
+    display: block;
+  }
+  .spaced {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 2fr;
+    border-bottom: 1px solid #000;
   }
 }
 </style>
+<script lang="ts">
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import SideBar from "@/components/Sidebar.vue";
+import RightSideBarVue from "./components/RightSideBar.vue";
+
+export default {
+  name: "app",
+  components: {
+    bpheader: Header,
+    bpfooter: Footer,
+    bpsidebar: SideBar,
+    bprightbar: RightSideBarVue,
+  },
+};
+</script>

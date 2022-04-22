@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Gotham";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Gotham"), url("../fonts/GothamNarrow-Bold.444683dc.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "GothamNarrow";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Gotham"), url("../fonts/GothamNarrow-Book.b2e94e0c.otf") format("opentype");
+  }
+
+
+  @font-face {
+    font-family: "Metro";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Gotham"), url("../fonts/Metropolis-BlackItalic.otf") format("opentype");
+  }
+
+
+
+body, html{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    height: 100%;
+    width: 100%;
+    color: rgba(74, 74, 74, 0.982);
+    overflow-x: hidden;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgba(74, 74, 74, 0.982);
+}
+ul li a:hover {
+  color: #9ce800;
+}
+
+
+textarea:focus, input:focus{
+  outline: none;
+}
