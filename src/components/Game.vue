@@ -2,12 +2,12 @@
   <div class="container">
     <div class="headline">
       <div class="wrap">
-        <span><i class="fas fa-bolt"></i></span>
-        pawaBoost
+        <span><i :class=icon1></i></span>
+       {{headline}}
       </div>
-      <i class="fa-solid fa-circle-info"></i>
+    <i :class=icon2></i>
     </div>
-    <div class="line">
+    <div class="border-bottom">
            <div class="date">
       <span>5:00 pm</span>
       <span>Sat 23/04</span>
@@ -20,13 +20,13 @@
       <li><a>Football/ Italie Serie A </a></li>
     </div>
     <div class="market">
-      <button class="mkt-btn"><span>1</span>1.65<span></span></button>
-      <button class="mkt-btn"><span>x</span>4.30<span></span></button>
+      <button class="mkt-btn"><span>1</span>1.65</button>
+      <button class="mkt-btn"><span>x</span>4.30</button>
       <button class="mkt-btn"><span>2</span><span>5.50</span></button>
       <button class="mkt-btn-sm">55+</button>
     </div>
     </div>
-      <div class="line">
+      <div class="border-bottom">
            <div class="date">
       <span>12:30 pm</span>
       <span>Sat 23/04</span>
@@ -45,7 +45,7 @@
       <button class="mkt-btn-sm">57+</button>
     </div>
     </div>
-      <div class="line">
+      <div class="border-bottom">
            <div class="date">
       <span>12:30 pm</span>
       <span>Sat 23/04</span>
@@ -73,6 +73,22 @@ import { defineComponent } from "@vue/runtime-dom";
 
 export default defineComponent({
   name: "Game",
+
+  data: () => {
+      return {
+          headline: 'pawaBoost',
+          icon1: 'fas fa-bolt',
+          icon2: 'fa-solid fa-circle-info',
+          date : {
+            
+          }
+      }
+
+  }, 
+
+  props: {
+     game: Object
+  }
 });
 </script>
 
@@ -108,6 +124,7 @@ export default defineComponent({
 
 .date > span:nth-child(1) {
   font-family: GothamNarrow;
+  margin-right: 5px;
 }
 
 .teams {
@@ -135,6 +152,8 @@ export default defineComponent({
   margin-bottom: 15px;
   margin-left: 15px;
   max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mkt-btn {
@@ -153,7 +172,7 @@ export default defineComponent({
 }
 
 .mkt-btn-sm {
-  background: #ffffff;
+  background:#fdfefb;
   padding: 5px 5px;
   display: flex;
   justify-content: center;
@@ -165,7 +184,7 @@ export default defineComponent({
 
 }
 
-.line {
+.border-bottom {
     border-bottom: 1px solid #f4f5f0;
 }
 </style>
