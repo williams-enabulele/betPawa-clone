@@ -57,11 +57,11 @@
           <div class="sub-menu" v-if="currentState">
             <ul>
               <li><a href="">JOIN NOW</a></li>
-              <li><a href=""></a>LOGIN</li>
-              <li><a href=""></a>DEPOSIT</li>
-              <li><a href=""></a>WHY JOIN?</li>
-              <li><a href=""></a>HELP</li>
-              <li><a href=""></a>DOWNLOAD APP</li>
+              <li><a href="">LOGIN</a></li>
+              <li><a href="">DEPOSIT</a></li>
+              <li><a href="">WHY JOIN?</a></li>
+              <li><a href="">HELP</a></li>
+              <li><a href="">DOWNLOAD APP</a></li>
             </ul>
           </div>
         </li>
@@ -184,7 +184,7 @@
   transition: all 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6);
 }
 
-.sub-menu > ul li {
+.sub-menu > ul > li > a {
   color: #252a2d;
   padding: 16px 16px 16px 18px;
   border-bottom: 1px solid #f4f5f0;

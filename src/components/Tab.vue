@@ -71,6 +71,10 @@ export default defineComponent({
   background: #e6e7e2;
 }
 
+.tab-menu >li>span>i{
+  margin-right: 3px;
+}
+
 .form {
   display: inline-block;
   max-width: 100%;
