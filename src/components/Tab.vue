@@ -72,7 +72,7 @@ export default defineComponent({
 }
 
 .tab-menu >li>span>i{
-  margin-right: 3px;
+  margin-right: 5gitpx;
 }
 
 .form {
