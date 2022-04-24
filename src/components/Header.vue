@@ -4,9 +4,9 @@
       <span @click="openMenu()"><i class="fa-solid fa-bars"></i> Sport</span>
       <span>
         <ul>
-          <li><a href="">Virtual</a></li>
-          <li><a href="">Jackpot</a></li>
-          <li><a href="">Games</a></li>
+          <li><router-link to="">Virtual</router-link></li>
+          <li><router-link to="">Jackpot</router-link></li>
+          <li><router-link to="">Games</router-link></li>
         </ul>
       </span>
       <span>
@@ -14,12 +14,13 @@
           <li @click="isClicked = !isClicked">
             <i class="fa-solid fa-magnifying-glass"></i>
           </li>
-          <li>
-            <a href=""><i class="fa-solid fa-user-large"></i>Menu</a>
+          <li @click="isMobileMenu = !isMobileMenu">
+            <a><i class="fa-solid fa-user-large"></i>Menu</a>
+            <SubMenu v-if="isMobileMenu" />
           </li>
           <li>
-            <a href=""
-              ><span><i class="fa-solid fa-futbol"></i>0</span></a
+            <router-link to=""
+              ><span><i class="fa-solid fa-futbol"></i>0</span></router-link
             >
           </li>
         </ul>
@@ -43,10 +44,10 @@
 
       <ul class="navs">
         <li class="nav-item">
-          <router-link to="/">LOGIN</router-link>
+          <router-link to="/signin">LOGIN</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="">
+          <router-link router-link to="/signup">
             <div class="btn">JOIN NOW</div>
           </router-link>
         </li>
@@ -54,16 +55,7 @@
           <div class="center" @click="currentState = !currentState">
             <AccountIcon />MENU
           </div>
-          <div class="sub-menu" v-if="currentState">
-            <ul>
-              <li><a href="">JOIN NOW</a></li>
-              <li><a href="">LOGIN</a></li>
-              <li><a href="">DEPOSIT</a></li>
-              <li><a href="">WHY JOIN?</a></li>
-              <li><a href="">HELP</a></li>
-              <li><a href="">DOWNLOAD APP</a></li>
-            </ul>
-          </div>
+          <SubMenu v-if="currentState" />
         </li>
       </ul>
     </div>
@@ -74,40 +66,27 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-  padding-left: 16px;
-  padding-right: 16px;
-  background: #252a2d;
-  height: 77px;
-  position: relative;
-  max-width: 100%;
+
+
+.navbar > ul {
   display: flex;
+  list-style: none;
   align-items: center;
+}
 
-  .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar > ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
+.navbar > ul > li {
+  margin-right: 15px;
+}
 
-  .navbar > ul > li {
-    margin-right: 15px;
-  }
+.navbar > ul > li a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
 
-  .navbar > ul > li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .navs {
-    display: flex;
-    justify-content: space-between;
-  }
+.navs {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {
@@ -172,24 +151,7 @@
   right: -16px;
   top: 38px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  z-index: 455;
-}
-
-.sub-menu > ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  font-family: GothamNarrow;
-  line-height: 15px;
-  transition: all 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6);
-}
-
-.sub-menu > ul > li > a {
-  color: #252a2d;
-  padding: 16px 16px 16px 18px;
-  border-bottom: 1px solid #f4f5f0;
-  cursor: pointer;
-  user-select: none;
+  z-index: 999;
 }
 
 .input > i {
@@ -235,6 +197,7 @@ input[type="search"] {
 .mobile-nav > span:nth-child(3) > ul > li > a > i {
   margin-right: 5px;
 }
+
 .mobile-nav > span > ul {
   display: flex;
   list-style: none;
@@ -279,7 +242,7 @@ a {
 
 .sidebar {
   position: absolute;
-  max-width: 400px;
+  width: 100vw;
   top: 0;
   left: 0;
   height: 100vh;
@@ -287,6 +250,11 @@ a {
   z-index: 500;
   overflow-y: scroll;
   transition: all 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6);
+}
+
+.img {
+  max-width: 100%;
+  margin: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -299,7 +267,25 @@ a {
   .sidebar {
     display: block;
   }
+
+  .container {
+    //padding-left: 16px;
+    padding-right: 16px;
+    background: #252a2d;
+    height: 77px;
+    position: relative;
+    max-width: 100%;
+    align-items: center;
+  }
+  .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 18px;
 }
+}
+
 @media only screen and (min-width: 600px) {
   .input {
     display: flex;
@@ -316,6 +302,22 @@ a {
   .sidebar {
     display: none;
   }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #252a2d;
+    height: 77px;
+    position: relative;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 }
 </style>
 
@@ -323,12 +325,14 @@ a {
 import { defineComponent } from "vue";
 import AccountIcon from "vue-material-design-icons/Account.vue";
 import SideBar from "./Sidebar.vue";
+import SubMenu from "./SubMenu.vue";
 
 export default defineComponent({
   name: "Header",
   components: {
     AccountIcon,
     bpSidebar: SideBar,
+    SubMenu,
   },
 
   data() {
@@ -336,6 +340,7 @@ export default defineComponent({
       currentState: false,
       isClicked: false,
       isMenu: false,
+      isMobileMenu: false,
     };
   },
 

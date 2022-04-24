@@ -5,6 +5,7 @@
       class="img"
       alt="promotion-banner"
     />
+    <QuickLinks/>
     <game />
   </div>
 </template>
@@ -12,11 +13,19 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Game from "../components/Game.vue";
+import QuickLinks from "../components/QuickLinks.vue"
 
 export default defineComponent({
   name: "HomeView",
   components: {
     game: Game,
+    QuickLinks
+  },
+
+  data(){
+    return {
+
+    }
   },
 });
 </script>

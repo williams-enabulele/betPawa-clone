@@ -71,13 +71,15 @@ export default defineComponent({
   background: #e6e7e2;
 }
 
-.tab-menu >li>span>i{
+.tab-menu > li > span > i {
   margin-right: 5px;
 }
 
 .form {
-  display: inline-block;
+  display: flex;
   max-width: 100%;
+  white-space: nowrap;
+  margin: 0 15px;
 }
 
 .label {
@@ -95,8 +97,8 @@ p {
 }
 
 input[type="text"] {
-  max-width: 100%;
-  padding: 8px 30px;
+  width: 100%;
+  padding: 8px 15px;
   margin: 0;
 }
 
@@ -107,6 +109,7 @@ input[type="text"] {
   color: #fff;
   width: 79px;
   font-family: Gotham;
+  margin-left: 5px;
 }
 
 .btn-full {

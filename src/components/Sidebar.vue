@@ -6,35 +6,51 @@
         <option>BasketBall</option>
         <option>Tennis</option>
       </select>
-      <span class="icon">
+      <span class="icon" @click="showMenu=!showMenu">
         <i class="fa-solid fa-xmark"></i>
       </span>
     </div>
-
     <ul>
       <li>
-        <a href=""><span></span>HOME</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-house"></i></span>HOME</a
+        >
       </li>
       <li>
-        <a href=""><span></span>LIVE NOW</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-wave-pulse"></i></span>LIVE NOW</a
+        >
       </li>
       <li>
-        <a href=""><span></span>UPCOMING</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-clock"></i></span>UPCOMING</a
+        >
       </li>
       <li>
-        <a href=""><span></span>VIRTUAL SPORTS</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-tv"></i></span>VIRTUAL SPORTS</a
+        >
       </li>
       <li>
-        <a href=""><span></span>PAWA 6 <span>FREE</span></a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-tennis-ball"></i></span>PAWA 6
+          <span>FREE</span></a
+        >
       </li>
       <li>
-        <a href=""><span></span>JACKPOT</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-party-horn"></i></span>JACKPOT</a
+        >
       </li>
       <li>
-        <a href=""><span></span>GAMES</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-baseball-bat-ball"></i></span>GAMES</a
+        >
       </li>
       <li>
-        <a href=""><span></span>POPULAR</a>
+        <a router-link to=""
+          ><span><i class="fa-solid fa-fire"></i></span>POPULAR</a
+        >
       </li>
     </ul>
     <Accordion isOpen="true">
@@ -44,44 +60,44 @@
       <template v-slot:content>
         <ul class="content">
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/england.png" /></span>ENGLAND
               AND PREMIER LEAGUE</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA EUROPEAN LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA CHAMPIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA NATIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/italy.png" /></span>ITALY SERIE
               A</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/germany.png" /></span></a
             >Germany Bundesliga 1
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/spain.png" /></span></a
             >Spain LaLiga
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/france.png" /></span></a
             >France Ligue 1
           </li>
@@ -95,44 +111,44 @@
       <template v-slot:content>
         <ul class="content">
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/england.png" /></span>ENGLAND
               AND PREMIER LEAGUE</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA EUROPEAN LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA CHAMPIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA NATIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/italy.png" /></span>ITALY SERIE
               A</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/germany.png" /></span></a
             >Germany Bundesliga 1
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/spain.png" /></span></a
             >Spain LaLiga
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/france.png" /></span></a
             >France Ligue 1
           </li>
@@ -146,44 +162,44 @@
       <template v-slot:content>
         <ul class="content">
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/england.png" /></span>ENGLAND
               AND PREMIER LEAGUE</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA EUROPEAN LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA CHAMPIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/europe.png" /></span></a
             >UEFA NATIONS LEAGUE
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/italy.png" /></span>ITALY SERIE
               A</a
             >
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/germany.png" /></span></a
             >Germany Bundesliga 1
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/spain.png" /></span></a
             >Spain LaLiga
           </li>
           <li>
-            <a href=""
+            <a router-link to=""
               ><span><img src="../assets/images/france.png" /></span></a
             >France Ligue 1
           </li>
@@ -203,9 +219,20 @@ export default defineComponent({
     Accordion,
   },
 
- 
+  methods: {
+    toggle(){
+      
+    }
+  },
+
+  data(){
+    return {
+      showMenu: true
+    }
+  },
+
   props: {
-      isMenu: Boolean
+    isMenu: Boolean,
   },
 });
 </script>
@@ -217,6 +244,7 @@ export default defineComponent({
   border-right: 1px solid #000;
   height: 100%;
   display: block;
+  
 }
 
 select {
@@ -280,26 +308,25 @@ ul > li:hover {
 }
 
 .search-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.search-wrapper>span{
-    margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
+.search-wrapper > span {
+  margin-right: 10px;
+}
+.search-wrapper > span i {
+  color: #fff;
+}
 @media only screen and (max-width: 600px) {
-.icon {
-  display: block;
+  .icon {
+    display: block;
+  }
 }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-.icon {
-  display: none;
-}
+  .icon {
+    display: none;
+  }
 }
 </style>
